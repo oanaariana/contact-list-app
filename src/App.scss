@@ -64,6 +64,8 @@ $color-background: #f1f1f1;
     flex: 1;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
 
     >* {
       margin: 6px;
@@ -92,7 +94,7 @@ $color-background: #f1f1f1;
   }
 
   &__text {
-    margin-left: 15px;
+    margin-left: 30px;
     display: block;
     margin: 2px 0 0 0;
   }
@@ -105,13 +107,13 @@ $color-background: #f1f1f1;
   }
 
   &__text--content {
-    margin: 15px;
+    margin: 30px;
   }
 
   &__closebtn {
     position: relative;
     margin: auto;
-    left: -132px;
+    left: -125px;
     top: -11px;
     border: none;
     padding: 0;
@@ -159,7 +161,7 @@ td {
   width: 40%;
   border-collapse: collapse;
   font-size: 75%;
-  padding-left: 24px;
+  padding-left: 23px;
   text-align: left;
 }
 
@@ -201,5 +203,6 @@ td {
 @media (max-width:460px) {
   .content__wrapper>* {
     flex-basis: 100%;
+    margin: 0 auto;
   }
 }

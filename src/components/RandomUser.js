@@ -1,63 +1,42 @@
 import React, { Component } from 'react';
 
 class RandomUser extends Component {
-  constructor(props) {
-    super(props);
-    //this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      editVisible: undefined
-    };
-  }
-
-  showEditDiv = id => {
-    this.setState({ editVisible: id })
-  };
-
-  // handleClick = selectedId => {
-  //   this.setState({
-  //     selectedId
-  //   });
-  // };
-
   render() {
-    // const isActive = this.props.id === this.state.selectedId;
-    // console.log(isActive)
-    // const display = isActive ? "visible" : "unvisible";
     return (
-
-      <div>
-        <h4 onClick={() => this.showEditDiv(this.props.id)}>{this.props.name}</h4>
+      <div className="wrapper__box">
+        <h4 className="underline" onClick={() => this.props.onAccordionClick(this.props.id)}>{`${this.props.user.name.last}  ${this.props.user.name.first}`}</h4>
         <div key={this.props.id} id={this.props.id}
-          className={`edit-card ${this.state.editVisible !== this.props.id ? "unvisible" : "visible"}`}>
+          className={`check-card ${this.props.isOpen ? "visible" : "unvisible"}`}>
           <div className="container">
-            <img src={this.props.picture} className="container__image" alt="" />
+            <button className="container__closebtn" onClick={() => this.props.onAccordionClick(this.props.id)}>X</button>
+            <img src={this.props.user.picture.medium} className="container__image" alt="" />
             <div className="container__text">
-              <h4 className="container__text--title">{this.props.name}</h4>
-              <table>
+              <h4 className="container__text--title">{`${this.props.user.name.first} ${this.props.user.name.last}`}</h4>
+              <table className="container__text--content">
                 <tbody>
                   <tr>
                     <td><strong>e-mail</strong></td>
-                    <td>{this.props.email}</td>
+                    <td>{this.props.user.email}</td>
                   </tr>
                   <tr>
                     <td><strong>phone</strong></td>
-                    <td>{this.props.phone}</td>
+                    <td>{this.props.user.phone}</td>
                   </tr>
                   <tr>
                     <td><strong>street</strong></td>
-                    <td>{this.props.street}</td>
+                    <td>{`${this.props.user.location.street.name} ${this.props.user.location.street.number}`}</td>
                   </tr>
                   <tr>
                     <td><strong>city</strong></td>
-                    <td>{this.props.city}</td>
+                    <td>{this.props.user.location.city}</td>
                   </tr>
                   <tr>
                     <td><strong>state</strong></td>
-                    <td>{this.props.state}</td>
+                    <td>{this.props.user.location.state}</td>
                   </tr>
                   <tr>
                     <td className="mark"><strong>postcode</strong></td>
-                    <td>{this.props.postcode}</td>
+                    <td>{this.props.user.location.postcode}</td>
                   </tr>
                 </tbody>
               </table>

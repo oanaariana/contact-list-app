@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="wrapper__box"
+  >
+    <h4
+      class="underline"
+    >
+      Bella Wang
+    </h4>
+    <div
+      class="edit-card unvisible"
+    >
+      <div
+        class="container"
+      >
+        <button
+          class="container__closebtn"
+        >
+          X
+        </button>
+        <img
+          alt=""
+          class="container__image"
+          src="https://randomuser.me/api/portraits/med/women/62.jpg"
+        />
+        <div
+          class="container__text"
+        >
+          <h4
+            class="container__text--title"
+          >
+            Bella Wang
+          </h4>
+          <table
+            class="container__text--content"
+          >
+            <tbody>
+              <tr>
+                <td>
+                  <strong>
+                    e-mail
+                  </strong>
+                </td>
+                <td>
+                  bella.wang@example.com
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    phone
+                  </strong>
+                </td>
+                <td>
+                  (057)-889-6313
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    street
+                  </strong>
+                </td>
+                <td>
+                  Stafford Street 9617
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    city
+                  </strong>
+                </td>
+                <td>
+                  Hastings
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    state
+                  </strong>
+                </td>
+                <td>
+                  Wellington
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="mark"
+                >
+                  <strong>
+                    postcode
+                  </strong>
+                </td>
+                <td>
+                  66909
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
